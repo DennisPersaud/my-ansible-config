@@ -10,13 +10,11 @@
       name:
         - base-devel
         - tmux
-        - neovim
         - emacs
         - ripgrep
         - findutils
         - fd
         - nnn
-        - firefox
         - zathura
         - zathura-pdf-mupdf
         - cronie

@@ -7,13 +7,17 @@
   - name: install core apps
     package:
       name:
+        - neovim
+        - rxvt-unicode
+        - firefox
+        - xf86-video-intel
+        - nvidia
         - bluez
         - bluez-utils
         - slim
         - xorg
         - xorg-init
         - picom
-        - rxvt-unicode
         - dolphin
         - wallch
         - nitrogen
