@@ -1,0 +1,49 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+  - name: install core apps
+    package:
+      name:
+        - bluez
+        - bluez-utils
+        - slim
+        - xorg
+        - xorg-init
+        - picom
+        - rxvt-unicode
+        - dolphin
+        - wallch
+        - nitrogen
+        - wallset
+        - rofi
+        - dunst
+        - tint2
+        - openbox
+        - ttf-dejavu
+        - ttf-liberation
+        - i3-wm
+        - gparted
+        - parted
+        - udiskie
+        - rclone
+        - kdeconnect
+        - ufw
+        - bacula
+        - snort
+        - clamav
+        - rkhunter
+        - gtile
+        - piper
+        - gcleaner
+        - lmd
+        - lynis
+        - yubikey-manager
+        - kvm
+        - qemu
+        - virt-manager
+      state: latest
+      update_cache: yes
+    when: ansible ansible_distribution == "Arch"

@@ -1,0 +1,60 @@
+
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+  - name: Install dev tools
+    package:
+      name:
+        - base-devel
+        - tmux
+        - neovim
+        - emacs
+        - ripgrep
+        - findutils
+        - fd
+        - nnn
+        - firefox
+        - zathura
+        - zathura-pdf-mupdf
+        - cronie
+        - code
+        - sc-im
+        - intellij-idea-community-edition
+        - android-studio
+        - gitlab-glab-bin
+        - java-openjdk
+        - dotnet-runtime
+        - dotnet-sdk
+        - python
+        - php
+        - kotlin
+        - languagetool
+        - wkhtmltopdf
+        - hunspell
+        - cppcheck
+        - r
+        - go
+        - composer
+        - cloudflared
+        - swift
+        - ruby
+        - perl
+        - xxd
+        - bless
+        - llvm
+        - netlify
+        - heroku-cli
+        - aws-cli
+        - azure-cli
+        - google-cloud-sdk
+        - yarn
+        - nodejs
+        - npm
+        - fzf
+        - docker
+      state: latest
+      update_cache: yes
+    when: ansible_distribution == "Arch"

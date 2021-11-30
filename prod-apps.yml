@@ -1,0 +1,52 @@
+
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+  - name: Install productivity apps
+    package:
+      name:
+        - drawio
+        - figma
+        - trello
+        - evernote
+        - xpad
+        - postman
+        - burpsuite
+        - calibre
+        - kindle
+        - ravenreader
+        - wireshark
+        - thunderbird
+        - neomutt
+        - olive
+        - kdenlive
+        - blender
+        - clementine
+        - mpv
+        - celluloid
+        - ffmpeg
+        - vokoscrenn
+        - obsstudio
+        - electrum
+        - binance
+        - thinkorswim
+        - firefox
+        - edge
+        - librewolf
+        - protonvpn
+        - keepassxc
+        - nmap
+        - gimp
+        - audacity
+        - ardour
+        - okular
+        - calendar
+        - speedcrunch
+        - jitsi
+        - qbittorrent
+      state: latest
+      update_cache: yes
+    when: ansible_distribution == "Arch"

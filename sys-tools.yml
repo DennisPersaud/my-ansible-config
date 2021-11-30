@@ -1,0 +1,60 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+  - name: update debian repo index
+      apt:
+        update_cache: yes
+        when: ansible_distribution == "Ubuntu"
+    
+
+  - name: update arch repo index
+      pacman:
+        update_cache: yes
+        when: ansible_distribution == "Arch"
+
+  - name: Install system tools
+    package:
+      name:
+        - man
+        - tlr
+        - starship
+        - alacritty
+        - exa
+        - bat
+        - ripgrep
+        - fd
+        - tokei
+        - procs
+        - atop
+        - iotop
+        - htop
+        - bytop
+        - top
+        - bottom
+        - neofetch
+        - tmux
+        - googler
+        - ddgr
+        - ncdu
+        - diskonaut
+        - glances
+        - bandwhich
+        - bmon
+        - speed-test
+        - organize-cli
+        - fx
+        - live-server
+        - procs
+        - editly
+        - cointop
+        - iponmap
+        - wttr.in
+        - imgp
+        - rainbowstream
+        - prettyping.sh
+      state: latest
+      update_cache: yes
+    when: ansible_distribution == "Arch"
