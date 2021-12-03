@@ -8,7 +8,6 @@
   - name: Install dev tools
     package:
       name:
-        - base-devel
         - tmux
         - emacs
         - ripgrep
